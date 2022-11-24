@@ -5,7 +5,7 @@ const authmiddleware=function(req,res,next){
     const  idToken=req.headers.token;  
     // console.log(idToken)  
 
-    if(idToken==null ){
+    if(idToken==null || idToken == ""){
         res.status(401).json({"message":"Empty token"})
     }
     else{
@@ -24,7 +24,7 @@ const authmiddleware=function(req,res,next){
         
         .catch((err)=>{
             console.log('err :',err)
-            res.status(401).json("Missing token or Time out")
+            res.status(401).json({"message":"User Not Mapping"})
         })  
          
     } 
