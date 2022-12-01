@@ -1,17 +1,17 @@
-const admin=require('../admin');
+const admin = require('../admin');
 
-const signup=(async(req,res)=>{
-    const user={
-        email:req.body.email,
-        password:req.body.password,
+const signup = (async (req, res) => {
+    const user = {
+        email: req.body.email,
+        password: req.body.password,
     }
-    const userRes=await admin.auth().createUser({
-        email:user.email,
-        password:user.password,
-        emailVerified:false,
-        disabled:false
+    const userRes = await admin.auth().createUser({
+        email: user.email,
+        password: user.password,
+        emailVerified: false,
+        disabled: false
     })
-    res.json(userRes);  
+    res.json(userRes);
 })
 
 
@@ -34,7 +34,7 @@ const signup=(async(req,res)=>{
 //     //     console.log('err :',err)
 //     //    })  
 
-    
+
 //     // const  idToken=req.headers.token;
 //     //     // console.log(idToken)
 //     // if(idToken==null ){
@@ -55,10 +55,10 @@ const signup=(async(req,res)=>{
 //     //         console.log('err :',err)
 //     //         res.status(401).json({"message":"Missing token"})
 //     //     })
-        
+
 //     // } 
 //     console.log("woring in signin")
 //     res.json({"message":"woring in signin"})
 // })
 
-module.exports=signup;
+module.exports = signup;

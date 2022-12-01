@@ -3,16 +3,16 @@ require('dotenv').config()
 var admin = require("firebase-admin");
 
 var serviceAccount = {
-  type:process.env.firebase_type,
-    project_id:process.env.firebase_project_id,
-    private_key_id:process.env.firebase_private_key_id,
-    private_key:process.env.firebase_private_key.replace(/\\n/g, '\n'),
-    client_email:process.env.firebase_client_email,
-    client_id:process.env.firebase_client_id,
-    auth_uri:process.env.firebase_auth_uri,
-    token_uri:process.env.firebase_token_uri,
-    auth_provider_x509_cert_url:process.env.firebase_auth_provider_x509_cert_url,
-    client_x509_cert_url:process.env.firebase_client_x509_cert_url
+    type:process.env.FB_TYPE,
+    project_id:process.env.FB_PROJECT_ID,
+    private_key_id:process.env.FB_PRIVATE_KEY_ID,
+    private_key:process.env.FB_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    client_email:process.env.FB_CLIENT_EMAIL,
+    client_id:process.env.FB_CLIENT_ID,
+    auth_uri:process.env.FB_AUTH_URI,
+    token_uri:process.env.FB_TOKEN_URI,
+    auth_provider_x509_cert_url:process.env.FB_AUTH_PROVIDER_X509_CERT_URL,
+    client_x509_cert_url:process.env.FB_CLIENT_X509_CERT_URL
 }
 
 
