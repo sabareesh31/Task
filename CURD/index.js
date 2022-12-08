@@ -126,7 +126,7 @@ app.use('/',(req,res,next)=>{
 
 
 
-//#rd parth API call
+//3rd parth API call
 
 //View the records
 
